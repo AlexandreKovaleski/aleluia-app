@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aleluia! Cantos e Orações</title>
+<meta name="description" content="O livro de cantos da Arquidiocese de Passo Fundo no celular e no computador: partituras, cifras, letras, orações e a liturgia do dia, sem internet. Grátis para Android e Windows.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aleluia! Cantos e Orações">
+<meta property="og:description" content="Partituras, cifras, letras, orações e a liturgia do dia no celular e no computador. Grátis para Android e Windows.">
+<meta property="og:url" content="https://alexandrekovaleski.github.io/aleluia-app/">
+<meta property="og:image" content="https://alexandrekovaleski.github.io/aleluia-app/imagens/compartilhar.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="imagens/brasao.png">
+<style>
+  @font-face { font-family: Inter; font-weight: 400; font-display: swap; src: url(fontes/Inter-Regular.woff) format("woff"); }
+  @font-face { font-family: Inter; font-weight: 600; font-display: swap; src: url(fontes/Inter-SemiBold.woff) format("woff"); }
+  @font-face { font-family: Inter; font-weight: 700; font-display: swap; src: url(fontes/Inter-Bold.woff) format("woff"); }
+  @font-face { font-family: InterDisplay; font-weight: 700; font-display: swap; src: url(fontes/InterDisplay-Bold.woff) format("woff"); }
+
+  :root {
+    color-scheme: light dark;
+    --bg: #F2F2F7;
+    --card: #FFFFFF;
+    --label: #000000;
+    --secondary: #6E6E73;
+    --tertiary: #AEAEB2;
+    --separator: #D1D1D6;
+    --fill: #E5E5EA;
+    --tint: #8C1D40;
+    --tint-soft: #F4E3E9;
+    --on-tint: #FFFFFF;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px -12px rgba(0,0,0,.12);
+    --phone: #1C1C1E;
+    --seg-on: #FFFFFF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --card: #1C1C1E;
+      --label: #FFFFFF;
+      --secondary: #98989F;
+      --tertiary: #636366;
+      --separator: #38383A;
+      --fill: #2C2C2E;
+      --tint: #E05A80;
+      --tint-soft: #3A1622;
+      --on-tint: #FFFFFF;
+      --shadow: 0 0 0 1px #2C2C2E;
+      --phone: #3A3A3C;
+      --seg-on: #636366;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--label);
+    font: 17px/1.5 Inter, -apple-system, "Segoe UI", Roboto, sans-serif;
+    letter-spacing: -0.01em; -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: var(--tint); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1, h2, h3 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
+  h1, h2 { font-family: InterDisplay, Inter, -apple-system, "Segoe UI", sans-serif; }
+  p { margin: 0; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 72px 0 0; }
+  .eyebrow { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--tint); }
+  .section-title { font-size: clamp(28px, 4vw, 40px); line-height: 1.12; margin-top: 8px; }
+  .section-lead { color: var(--secondary); font-size: 18px; margin-top: 12px; max-width: 640px; }
+
+  /* barra do topo */
+  .top {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    -webkit-backdrop-filter: saturate(180%) blur(16px); backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: .5px solid var(--separator);
+  }
+  .top .wrap { display: flex; align-items: center; height: 56px; gap: 10px; }
+  .top img { width: 30px; height: 30px; }
+  .top b { font-size: 17px; }
+  .top nav { margin-left: auto; display: flex; gap: 22px; font-size: 15px; }
+  .top nav a { color: var(--label); }
+  .top nav a.cta { color: var(--tint); font-weight: 600; }
+  @media (max-width: 640px) { .top nav a:not(.cta) { display: none; } }
+
+  /* destaque */
+  .hero { padding: 48px 0 0; }
+  .hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; }
+  .logo { width: min(320px, 80%); }
+  .logo-dark { display: none; }
+  @media (prefers-color-scheme: dark) { .logo-light { display: none; } .logo-dark { display: block; } }
+  .hero h1 { font-size: clamp(38px, 6vw, 60px); line-height: 1.04; margin-top: 28px; }
+  .hero h1 span { color: var(--tint); }
+  .hero .lead { font-size: clamp(18px, 2.2vw, 21px); color: var(--secondary); margin-top: 16px; max-width: 520px; }
+  .downloads { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 12px; min-width: 210px;
+    padding: 12px 20px 12px 16px; border-radius: 14px;
+    background: var(--card); color: var(--label); box-shadow: var(--shadow);
+    border: 1px solid var(--separator); transition: transform .15s ease;
+  }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); }
+  .btn:active { transform: scale(.98); }
+  .btn svg { width: 30px; height: 30px; flex: none; }
+  .btn small { display: block; font-size: 12px; color: var(--secondary); line-height: 1.2; }
+  .btn strong { display: block; font-size: 19px; line-height: 1.25; }
+  .btn.primary { background: var(--tint); color: var(--on-tint); border-color: transparent; }
+  .btn.primary small { color: rgba(255,255,255,.8); }
+  .btn.primary svg path { fill: #fff; stroke: #fff; }
+  .btn.primary svg path[stroke] { fill: none; }
+  .fine { margin-top: 14px; font-size: 14px; color: var(--secondary); }
+  .notice {
+    display: none; margin-top: 18px; padding: 12px 16px; border-radius: 12px;
+    background: var(--tint-soft); font-size: 15px; max-width: 520px;
+  }
+  .phones { position: relative; height: 560px; }
+  .phone {
+    position: absolute; width: 238px; aspect-ratio: 786 / 1704;
+    padding: 7px; border-radius: 38px; background: var(--phone);
+    box-shadow: 0 40px 70px -30px rgba(0,0,0,.45);
+  }
+  .phone img { width: 100%; height: 100%; border-radius: 31px; object-fit: cover; }
+  .phones .a { left: 4%; top: 30px; transform: rotate(-5deg); }
+  .phones .b { right: 4%; top: 0; transform: rotate(4deg); }
+  @media (max-width: 860px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .phones { height: 430px; }
+    .phone { width: 180px; border-radius: 30px; padding: 6px; }
+    .phone img { border-radius: 24px; }
+    .phones .a { left: calc(50% - 175px); }
+    .phones .b { right: calc(50% - 175px); }
+  }
+
+  /* funcionalidades */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; margin-top: 32px; }
+  .card { background: var(--card); border-radius: 18px; padding: 22px; box-shadow: var(--shadow); }
+  .card h3 { font-size: 19px; margin-top: 14px; }
+  .card p { color: var(--secondary); font-size: 16px; margin-top: 6px; }
+  .icon {
+    width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; color: #fff;
+  }
+  .icon svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* galeria */
+  .gallery {
+    display: grid; grid-auto-flow: column; grid-auto-columns: minmax(200px, 1fr); gap: 22px;
+    margin-top: 36px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 4px 24px;
+  }
+  .gallery figure { margin: 0; scroll-snap-align: center; }
+  .gallery .phone { position: static; width: 100%; transform: none; box-shadow: 0 24px 40px -24px rgba(0,0,0,.4); }
+  .gallery figcaption { text-align: center; color: var(--secondary); font-size: 15px; margin-top: 14px; }
+
+  /* computador */
+  .desktop { display: grid; grid-template-columns: .8fr 1.2fr; gap: 40px; align-items: center; }
+  .window { border-radius: 12px; overflow: hidden; background: var(--card); box-shadow: 0 40px 70px -35px rgba(0,0,0,.45); border: 1px solid var(--separator); }
+  .window .bar { height: 32px; display: flex; align-items: center; padding: 0 12px; font-size: 12px; color: var(--secondary); border-bottom: 1px solid var(--separator); }
+  .window .bar span { margin-left: auto; letter-spacing: 10px; color: var(--tertiary); }
+  .ticks { list-style: none; padding: 0; margin: 22px 0 0; }
+  .ticks li { position: relative; padding-left: 30px; margin-top: 12px; }
+  .ticks li::before {
+    content: ""; position: absolute; left: 0; top: 4px; width: 20px; height: 20px; border-radius: 50%;
+    background: var(--tint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 20px no-repeat;
+  }
+  kbd {
+    font: 600 13px Inter, sans-serif; padding: 2px 7px; border-radius: 6px;
+    background: var(--card); border: 1px solid var(--separator); box-shadow: 0 1px 0 var(--separator);
+  }
+  @media (max-width: 860px) { .desktop { grid-template-columns: 1fr; } }
+
+  /* instalação */
+  .segmented {
+    display: inline-grid; grid-auto-flow: column; grid-auto-columns: 1fr; margin-top: 28px;
+    background: var(--fill); padding: 3px; border-radius: 10px; min-width: 300px;
+  }
+  .segmented button {
+    font: 600 15px Inter, sans-serif; color: var(--label); background: none; border: 0;
+    padding: 8px 18px; border-radius: 8px; cursor: pointer;
+  }
+  .segmented button[aria-selected="true"] { background: var(--seg-on); box-shadow: 0 2px 6px rgba(0,0,0,.12); }
+  code { font: 600 .92em Inter, sans-serif; background: var(--fill); padding: 1px 6px; border-radius: 6px; white-space: nowrap; }
+  .panel { display: none; margin-top: 22px; }
+  .panel.on { display: block; }
+  .steps { list-style: none; counter-reset: s; padding: 0; margin: 0; background: var(--card); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; }
+  .steps > li { counter-increment: s; position: relative; padding: 18px 20px 18px 66px; }
+  .steps > li + li { border-top: .5px solid var(--separator); }
+  .steps > li::before {
+    content: counter(s); position: absolute; left: 20px; top: 17px; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--tint); color: #fff; font-weight: 700; font-size: 15px; display: grid; place-items: center;
+  }
+  .steps b { font-weight: 600; }
+  .steps .hint { display: block; color: var(--secondary); font-size: 15px; margin-top: 4px; }
+  .callout { margin-top: 14px; padding: 16px 20px; border-radius: 14px; background: var(--tint-soft); font-size: 16px; }
+  .callout + .callout { margin-top: 10px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 14px; background: var(--card); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); font-size: 16px; }
+  td { padding: 12px 18px; vertical-align: top; }
+  tr + tr td { border-top: .5px solid var(--separator); }
+  td:first-child { white-space: nowrap; width: 1%; }
+  h3.sub { font-size: 20px; margin-top: 34px; }
+
+  /* dúvidas */
+  .faq { margin-top: 28px; background: var(--card); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; }
+  .faq details + details { border-top: .5px solid var(--separator); }
+  .faq summary { cursor: pointer; list-style: none; padding: 18px 52px 18px 20px; font-weight: 600; position: relative; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: ""; position: absolute; right: 22px; top: 50%; width: 9px; height: 9px; margin-top: -7px;
+    border-right: 2px solid var(--tertiary); border-bottom: 2px solid var(--tertiary); transform: rotate(45deg); transition: transform .2s;
+  }
+  .faq details[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
+  .faq details p { padding: 0 20px 18px; color: var(--secondary); }
+
+  footer { padding: 72px 0 48px; text-align: center; color: var(--secondary); font-size: 14px; }
+  footer img { width: 56px; margin: 0 auto 12px; }
+  footer nav { margin-top: 10px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .wrap { padding: 0 16px; }
+    section { padding-top: 56px; }
+    .btn { flex: 1 1 100%; }
+    .segmented { display: grid; min-width: 0; }
+    .steps > li { padding-left: 60px; }
+    .steps > li::before { left: 16px; }
+    td { padding: 10px 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <img src="imagens/brasao.png" alt="">
+    <b>Aleluia!</b>
+    <nav>
+      <a href="#recursos">Recursos</a>
+      <a href="#telas">Telas</a>
+      <a href="#instalar">Como instalar</a>
+      <a class="cta" href="#baixar">Baixar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero" id="baixar">
+    <div class="wrap">
+      <div>
+        <img class="logo logo-light" src="imagens/logo.png" alt="Arquidiocese de Passo Fundo">
+        <img class="logo logo-dark" src="imagens/logo_escuro.png" alt="Arquidiocese de Passo Fundo">
+        <h1>Aleluia! <span>Cantos e Orações</span></h1>
+        <p class="lead">O livro de cantos da Arquidiocese no celular e no computador: partituras, cifras, letras, orações e a liturgia do dia — tudo funcionando sem internet.</p>
+
+        <div class="downloads">
+          <a class="btn" id="btn-android" href="https://github.com/AlexandreKovaleski/aleluia-app/releases/latest/download/Aleluia.apk">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#3DDC84" fill-rule="evenodd" d="M4.5 17a7.5 7.5 0 0 1 15 0zM9.2 12.6a1 1 0 1 0 0 2a1 1 0 1 0 0-2zm5.6 0a1 1 0 1 0 0 2a1 1 0 1 0 0-2z"/><path d="M8 10.6 6.4 7.9M16 10.6l1.6-2.7" stroke="#3DDC84" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span><small>Baixar para</small><strong>Android</strong><small data-size="Aleluia.apk">APK · 73 MB</small></span>
+          </a>
+          <a class="btn" id="btn-windows" href="https://github.com/AlexandreKovaleski/aleluia-app/releases/latest/download/Aleluia-Instalador.exe">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#0078D4" d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg>
+            <span><small>Baixar para</small><strong>Windows</strong><small data-size="Aleluia-Instalador.exe">Instalador · 46 MB</small></span>
+          </a>
+        </div>
+        <p class="fine"><span data-version>Versão 1.0.0</span> · Grátis · Android 7 ou mais novo · Windows 10 ou 11</p>
+        <p class="notice" id="notice-ios">No iPhone o app ainda não está disponível. Por enquanto, ele pode ser instalado no Android e no Windows.</p>
+      </div>
+      <div class="phones" aria-hidden="true">
+        <div class="phone a"><img src="imagens/2_partitura.png" alt=""></div>
+        <div class="phone b"><img src="imagens/3_cifra.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="recursos">
+    <div class="wrap">
+      <p class="eyebrow">Recursos</p>
+      <h2 class="section-title">O livro inteiro, pronto para a celebração</h2>
+      <p class="section-lead">Feito para quem canta, toca e prepara a liturgia — com o mesmo conteúdo do livro impresso.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="icon" style="background:#8C1D40"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div>
+          <h3>Mais de 770 cantos</h3>
+          <p>Partitura, cifra e letra de cada canto, além dos ritos da missa e das orações do livro.</p>
+        </div>
+        <div class="card">
+          <div class="icon" style="background:#5856D6"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+          <h3>Quatro formas de ver</h3>
+          <p>Partitura, partitura com cifras, cifra ou só a letra — troque com um toque.</p>
+        </div>
+        <div class="card">
+          <div class="icon" style="background:#FF9500"><svg viewBox="0 0 24 24"><path d="M7 20V4M3 8l4-4 4 4M17 4v16M13 16l4 4 4-4"/></svg></div>
+          <h3>Muda o tom</h3>
+          <p>A cifra é transposta para qualquer tom, e o app lembra o tom escolhido para cada canto.</p>
+        </div>
+        <div class="card">
+          <div class="icon" style="background:#34C759"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <h3>Liturgia do dia</h3>
+          <p>Tempo, cor e celebrações do dia, com as leituras da missa (CNBB) guardadas no aparelho.</p>
+        </div>
+        <div class="card">
+          <div class="icon" style="background:#30B0C7"><svg viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg></div>
+          <h3>Listas para a missa</h3>
+          <p>Cantos e textos na ordem, com o tom de cada um. Envie pelo WhatsApp e a equipe importa igualzinho.</p>
+        </div>
+        <div class="card">
+          <div class="icon" style="background:#FF3B30"><svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg></div>
+          <h3>Feito para quem toca</h3>
+          <p>Rolagem automática, pedal Bluetooth, tela sempre acesa e vídeo-aulas de centenas de cantos.</p>
+        </div>
+        <div class="card">
+          <div class="icon" style="background:#8E8E93"><svg viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
+          <h3>Imprimir</h3>
+          <p>Um canto ou a lista inteira, cada canto numa folha, com o tom escolhido.</p>
+        </div>
+        <div class="card">
+          <div class="icon" style="background:#007AFF"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+          <h3>Busca rápida</h3>
+          <p>Por número, título, tempo litúrgico ou qualquer trecho da letra.</p>
+        </div>
+        <div class="card">
+          <div class="icon" style="background:#AF52DE"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.64-6.36L21 8"/><path d="M21 3v5h-5"/></svg></div>
+          <h3>Sempre atualizado</h3>
+          <p>Correções de cantos, partituras e leituras chegam sozinhas, sem reinstalar. Achou um erro? Relate pelo próprio app.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="telas">
+    <div class="wrap">
+      <p class="eyebrow">Telas</p>
+      <h2 class="section-title">Simples como folhear o livro</h2>
+      <div class="gallery">
+        <figure><div class="phone"><img src="imagens/1_inicio.png" alt="Tela inicial com a liturgia do dia" loading="lazy"></div><figcaption>A liturgia do dia</figcaption></figure>
+        <figure><div class="phone"><img src="imagens/2_partitura.png" alt="Canto com a partitura" loading="lazy"></div><figcaption>A partitura do livro</figcaption></figure>
+        <figure><div class="phone"><img src="imagens/3_cifra.png" alt="Canto com a cifra" loading="lazy"></div><figcaption>A cifra, em qualquer tom</figcaption></figure>
+        <figure><div class="phone"><img src="imagens/4_lista.png" alt="Lista de cantos para a missa" loading="lazy"></div><figcaption>A lista da celebração</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap desktop">
+      <div>
+        <p class="eyebrow">No computador</p>
+        <h2 class="section-title">Monte as listas com mouse e teclado</h2>
+        <ul class="ticks">
+          <li>Os cantos do livro numa coluna ao lado da lista: um clique põe ou tira.</li>
+          <li>Arraste para mudar a ordem e ajuste o tom de cada canto.</li>
+          <li><kbd>Ctrl</kbd> + <kbd>F</kbd> busca, <kbd>Ctrl</kbd> + <kbd>P</kbd> imprime.</li>
+          <li>Leve a lista para o celular pelo WhatsApp Web.</li>
+        </ul>
+      </div>
+      <div class="window">
+        <div class="bar">Aleluia! Cantos e Orações<span>– ▢ ✕</span></div>
+        <img src="imagens/5_computador.png" alt="Montando uma lista no computador" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section id="instalar">
+    <div class="wrap">
+      <p class="eyebrow">Como instalar</p>
+      <h2 class="section-title">Pronto em um minuto</h2>
+      <p class="section-lead">O app não está nas lojas: ele é baixado direto daqui. Siga o passo a passo do seu aparelho.</p>
+
+      <div class="segmented" role="tablist">
+        <button role="tab" id="tab-android" aria-selected="true" aria-controls="panel-android">Android</button>
+        <button role="tab" id="tab-windows" aria-selected="false" aria-controls="panel-windows">Windows</button>
+      </div>
+
+      <div class="panel on" id="panel-android" role="tabpanel">
+        <ol class="steps">
+          <li><b>No celular</b>, toque em <a href="https://github.com/AlexandreKovaleski/aleluia-app/releases/latest/download/Aleluia.apk"><b>Baixar para Android</b></a>. O arquivo <code>Aleluia.apk</code> começa a baixar.
+            <span class="hint">Se o navegador avisar que o arquivo pode ser perigoso, toque em <b>Baixar mesmo assim</b>.</span></li>
+          <li>Quando o download terminar, toque em <b>Abrir</b>.
+            <span class="hint">Se o aviso já sumiu, abra o app <b>Arquivos</b> (ou <b>Downloads</b>) e toque em <code>Aleluia.apk</code>.</span></li>
+          <li>Na primeira vez, o Android pede licença: toque em <b>Configurações</b>, ligue <b>Permitir desta fonte</b> e volte.</li>
+          <li>Toque em <b>Instalar</b>.
+            <span class="hint">Se o <b>Play Protect</b> avisar, toque em <b>Mais detalhes → Instalar mesmo assim</b>. Em celulares Xiaomi, a verificação de segurança pode pedir alguns segundos antes de liberar o botão.</span></li>
+          <li>Pronto! Toque em <b>Abrir</b> ou procure o ícone <b>Aleluia!</b> na tela do celular.</li>
+        </ol>
+        <p class="callout"><b>Para atualizar</b>, baixe e instale de novo pelo mesmo botão: o app é instalado por cima e suas listas, favoritos e tons continuam. Cantos e partituras se atualizam sozinhos pela internet.</p>
+      </div>
+
+      <div class="panel" id="panel-windows" role="tabpanel">
+        <ol class="steps">
+          <li><b>No computador</b>, clique em <a href="https://github.com/AlexandreKovaleski/aleluia-app/releases/latest/download/Aleluia-Instalador.exe"><b>Baixar para Windows</b></a>. O arquivo <code>Aleluia-Instalador.exe</code> vai para a pasta <b>Downloads</b>.
+            <span class="hint">Se o navegador disser que o arquivo não é baixado com frequência, clique em <b>⋯ → Manter → Manter mesmo assim</b>.</span></li>
+          <li>Abra o <code>Aleluia-Instalador.exe</code>.</li>
+          <li>Se aparecer <b>“O Windows protegeu o computador”</b>, clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>.
+            <span class="hint">O aviso aparece porque o programa é novo e ainda não tem assinatura digital paga.</span></li>
+          <li>Marque se quer um atalho na área de trabalho, clique em <b>Instalar</b> e depois em <b>Concluir</b>.</li>
+          <li>Pronto! Depois, é só procurar <b>Aleluia</b> no <b>menu Iniciar</b>.</li>
+        </ol>
+        <p class="callout">Não precisa de senha de administrador. <b>Para atualizar</b>, rode o instalador novo: ele substitui a versão anterior e mantém suas listas.</p>
+        <h3 class="sub">Atalhos de teclado</h3>
+        <table>
+          <tr><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td><td>Busca na coluna de cantos, ao montar uma lista</td></tr>
+          <tr><td><kbd>Ctrl</kbd> + <kbd>P</kbd></td><td>Imprime o canto ou a lista aberta</td></tr>
+          <tr><td><kbd>→</kbd> ou <kbd>Page Down</kbd></td><td>Desce a tela; no fim do canto, vai para o próximo (como o pedal)</td></tr>
+          <tr><td><kbd>←</kbd> ou <kbd>Page Up</kbd></td><td>Sobe a tela; no começo, volta para o anterior</td></tr>
+          <tr><td>Botão direito</td><td>Numa lista: compartilhar, copiar, imprimir, duplicar ou excluir</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="duvidas">
+    <div class="wrap">
+      <p class="eyebrow">Dúvidas</p>
+      <h2 class="section-title">Perguntas frequentes</h2>
+      <div class="faq">
+        <details>
+          <summary>Como levo uma lista do celular para o computador?</summary>
+          <p>Em <b>Minhas listas</b>, toque e segure a lista (no computador, botão direito) e escolha <b>Compartilhar</b> ou <b>Copiar mensagem</b>. Envie pelo WhatsApp. No outro aparelho, copie a mensagem inteira e toque em <b>Importar</b>, o ícone ao lado do <b>+</b>.</p>
+        </details>
+        <details>
+          <summary>Precisa de internet?</summary>
+          <p>Não. Cantos, partituras, orações e as leituras da missa ficam guardados no aparelho. A internet só é usada para baixar atualizações e abrir as vídeo-aulas.</p>
+        </details>
+        <details>
+          <summary>Achei um erro numa cifra ou letra. Como aviso?</summary>
+          <p>Abra o canto e use <b>⋯ → Reportar problema</b>. Na cifra, toque e segure a linha errada para mandar exatamente qual é. A mensagem vai pronta pelo WhatsApp.</p>
+        </details>
+        <details>
+          <summary>Um canto corrigido ainda aparece errado.</summary>
+          <p>Vá em <b>Configurações → Atualizações → Verificar agora</b>. O app baixa as correções mais recentes.</p>
+        </details>
+        <details>
+          <summary>Não consigo instalar no celular.</summary>
+          <p>O app precisa do Android 7 ou mais novo. Confira também se a opção <b>Permitir desta fonte</b> foi ligada para o navegador que fez o download.</p>
+        </details>
+        <details>
+          <summary>Tem para iPhone?</summary>
+          <p>Ainda não. Por enquanto, o app está disponível para Android e Windows.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="imagens/brasao.png" alt="">
+    <p>Aleluia! Cantos e Orações · Arquidiocese de Passo Fundo</p>
+    <nav>
+      <a href="https://github.com/AlexandreKovaleski/aleluia-app/releases">Todas as versões</a>
+      <a href="https://github.com/AlexandreKovaleski/aleluia-app">Página no GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // destaca o botão do aparelho de quem abriu a página e abre a aba certa
+  // do passo a passo
+  (function () {
+    var ua = navigator.userAgent;
+    var platform = /Android/i.test(ua) ? 'android'
+      : /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? 'ios'
+      : /Windows/i.test(ua) ? 'windows' : 'other';
+    var android = document.getElementById('btn-android');
+    var windows = document.getElementById('btn-windows');
+    if (platform === 'android') android.classList.add('primary');
+    if (platform === 'windows') {
+      windows.classList.add('primary');
+      windows.parentNode.insertBefore(windows, android);
+    }
+    if (platform === 'ios') document.getElementById('notice-ios').style.display = 'block';
+
+    function show(tab) {
+      ['android', 'windows'].forEach(function (t) {
+        document.getElementById('tab-' + t).setAttribute('aria-selected', t === tab);
+        document.getElementById('panel-' + t).classList.toggle('on', t === tab);
+      });
+    }
+    document.getElementById('tab-android').onclick = function () { show('android'); };
+    document.getElementById('tab-windows').onclick = function () { show('windows'); };
+    if (platform === 'windows') show('windows');
+
+    // versão e tamanho dos arquivos da última publicação
+    fetch('https://api.github.com/repos/AlexandreKovaleski/aleluia-app/releases/latest')
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (rel) {
+        if (!rel) return;
+        document.querySelectorAll('[data-version]').forEach(function (e) {
+          e.textContent = 'Versão ' + rel.tag_name.replace(/^v/, '');
+        });
+        document.querySelectorAll('[data-size]').forEach(function (e) {
+          var a = rel.assets.filter(function (x) { return x.name === e.getAttribute('data-size'); })[0];
+          if (a) e.textContent = e.textContent.split('·')[0] + '· ' + Math.round(a.size / 1e6) + ' MB';
+        });
+      })
+      .catch(function () {});
+  })();
+</script>
+</body>
+</html>

@@ -19,6 +19,10 @@
 </p>
 
 <p align="center">
+  <b>🌐 Site do app: <a href="https://alexandrekovaleski.github.io/aleluia-app/">alexandrekovaleski.github.io/aleluia-app</a></b>
+</p>
+
+<p align="center">
   <sub>
     Android 7 ou mais novo · Windows 10 ou 11 (64 bits) · Gratuito<br>
     Links diretos: <a href="https://github.com/AlexandreKovaleski/aleluia-app/releases/latest/download/Aleluia.apk">Aleluia.apk</a> ·

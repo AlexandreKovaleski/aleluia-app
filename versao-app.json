@@ -1,0 +1,8 @@
+{
+ "versao": "1.0.2",
+ "build": 3,
+ "novidades": [
+  "Confere sozinho as atualizações de cantos sempre que o app é aberto",
+  "Avisa quando há uma versão nova do app"
+ ]
+}

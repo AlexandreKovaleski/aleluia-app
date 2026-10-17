@@ -1,8 +1,8 @@
 {
- "versao": "1.0.2",
- "build": 3,
+ "versao": "1.0.3",
+ "build": 4,
  "novidades": [
-  "Confere sozinho as atualizações de cantos sempre que o app é aberto",
-  "Avisa quando há uma versão nova do app"
+  "Grave os cantos durante o ensaio, pelo botão de microfone na tela do canto",
+  "Ouça, envie pelo WhatsApp, renomeie ou apague as gravações"
  ]
 }

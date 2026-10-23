@@ -1,8 +1,8 @@
 {
- "versao": "1.0.3",
- "build": 4,
+ "versao": "1.0.4",
+ "build": 5,
  "novidades": [
-  "Grave os cantos durante o ensaio, pelo botão de microfone na tela do canto",
-  "Ouça, envie pelo WhatsApp, renomeie ou apague as gravações"
+  "Rolagem automática com mais velocidades, de 0,1× a 4×",
+  "Toque na velocidade da barra de baixo para abrir o controle deslizante"
  ]
 }

@@ -1,8 +1,11 @@
 {
- "versao": "1.0.4",
- "build": 5,
+ "versao": "1.0.5",
+ "build": 6,
  "novidades": [
-  "Rolagem automática com mais velocidades, de 0,1× a 4×",
-  "Toque na velocidade da barra de baixo para abrir o controle deslizante"
+  "Importar cantos de Word e PDF corrigido, com os acordes no lugar exato",
+  "Importe cadernos com vários cantos e pastas .zip, que viram seções numeradas em Outros",
+  "Organize Outros em seções próprias",
+  "Desfazer e refazer na edição de cantos",
+  "Importe áudios para as gravações e envie a lista com as gravações"
  ]
 }

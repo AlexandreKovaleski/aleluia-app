@@ -1,11 +1,8 @@
 {
- "versao": "1.0.5",
- "build": 6,
+ "versao": "1.0.6",
+ "build": 7,
  "novidades": [
-  "Importar cantos de Word e PDF corrigido, com os acordes no lugar exato",
-  "Importe cadernos com vários cantos e pastas .zip, que viram seções numeradas em Outros",
-  "Organize Outros em seções próprias",
-  "Desfazer e refazer na edição de cantos",
-  "Importe áudios para as gravações e envie a lista com as gravações"
+  "Compartilhe as seções de Outros, com as gravações se quiser",
+  "Importe uma seção recebida em Outros › Importar arquivo"
  ]
 }

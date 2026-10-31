@@ -1,8 +1,9 @@
 {
- "versao": "1.0.6",
- "build": 7,
+ "versao": "1.0.7",
+ "build": 8,
  "novidades": [
-  "Compartilhe as seções de Outros, com as gravações se quiser",
-  "Importe uma seção recebida em Outros › Importar arquivo"
+  "Toque no arquivo da lista ou seção no WhatsApp e escolha Abrir com o Aleluia",
+  "Seções recebidas importam mesmo se o arquivo foi descompactado",
+  "Corrigida a tela preta ao excluir uma seção"
  ]
 }

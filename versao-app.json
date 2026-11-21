@@ -1,9 +1,11 @@
 {
- "versao": "1.0.7",
- "build": 8,
+ "versao": "1.0.8",
+ "build": 9,
  "novidades": [
-  "Toque no arquivo da lista ou seção no WhatsApp e escolha Abrir com o Aleluia",
-  "Seções recebidas importam mesmo se o arquivo foi descompactado",
-  "Corrigida a tela preta ao excluir uma seção"
+  "Rolagem automática não pula mais ao voltar de outro app",
+  "Busca mais rápida, e a de adicionar cantos na lista acha palavras sem acento",
+  "Listas de missa: reordenar sem piscar e toques rápidos sem erro",
+  "Ao excluir um canto adicionado, as gravações dele saem junto",
+  "Correções na importação de cantos e no envio de listas e seções"
  ]
 }

@@ -1,0 +1,1582 @@
+{
+ "_como_usar": "Gerado por tools/sync_videos.py a partir das colunas 'Tempo Liturgico' e 'Ocasião' da planilha; edite a planilha, não este arquivo.",
+ "1": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "2": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "3": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "4": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "5": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": "Acendimento da coroa do Advento"
+ },
+ "6": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": "Acendimento da coroa do Advento"
+ },
+ "7": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "8": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "9": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "10": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "23": {
+  "tempos": [],
+  "ocasiao": "Aspersão"
+ },
+ "41": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "42": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "43": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "44": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "45": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "46": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "47": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "48": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "49": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "50": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "51": {
+  "tempos": [
+   "advento",
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "52": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "53": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "54": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "55": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "56": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "57": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "58": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "59": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": "Festa da Sagrada Família"
+ },
+ "60": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "61": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "62": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "63": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "64": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "65": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "66": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "67": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "68": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "69": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "70": {
+  "tempos": [
+   "quaresma",
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "71": {
+  "tempos": [
+   "quaresma",
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "72": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Domingo de Ramos"
+ },
+ "73": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Domingo de Ramos"
+ },
+ "74": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Quinta-feira Santa"
+ },
+ "75": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "76": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "77": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "78": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "79": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "80": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "81": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "82": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "83": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "84": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "85": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "86": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "87": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "88": {
+  "tempos": [
+   "pascoa",
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "89": {
+  "tempos": [
+   "pascoa",
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "90": {
+  "tempos": [
+   "pascoa",
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "91": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": "Ascensão do Senhor"
+ },
+ "92": {
+  "tempos": [
+   "pentecostes"
+  ],
+  "ocasiao": ""
+ },
+ "93": {
+  "tempos": [
+   "pentecostes",
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "94": {
+  "tempos": [
+   "pentecostes"
+  ],
+  "ocasiao": "Pentecostes / Crisma"
+ },
+ "95": {
+  "tempos": [
+   "pentecostes"
+  ],
+  "ocasiao": "Espírito Santo e Crisma"
+ },
+ "96": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Santíssima Trindade"
+ },
+ "97": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Santíssima Trindade"
+ },
+ "98": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Santíssima Trindade"
+ },
+ "99": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Santíssima Trindade"
+ },
+ "100": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Solenidade do Corpo e Sangue de Cristo"
+ },
+ "101": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Solenidade do Corpo e Sangue de Cristo"
+ },
+ "102": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "São Pedro e São Paulo"
+ },
+ "103": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "104": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "105": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "106": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "107": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "108": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "109": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "110": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "111": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "112": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "113": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "114": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "115": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "116": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "117": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "118": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "119": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "120": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "121": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "122": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "123": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "129": {
+  "tempos": [
+   "comum",
+   "solenidades"
+  ],
+  "ocasiao": "Tempo Comum/Festas/Nossa Senhora"
+ },
+ "130": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": "Tempo Comum (Domingos)"
+ },
+ "131": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Sagrado Coração de Jesus"
+ },
+ "132": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Sagrado Coração de Jesus"
+ },
+ "133": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "134": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "135": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "136": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "138": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "139": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "140": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "145": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "146": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "148": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "149": {
+  "tempos": [
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "150": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "176": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "184": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "213": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "214": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "215": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "216": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "217": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "218": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "219": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "220": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "221": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "222": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "223": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "224": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Domingo de Ramos e Sexta-feira Santa"
+ },
+ "225": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Quinta-feira Santa"
+ },
+ "245": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "246": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "247": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "248": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "249": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "250": {
+  "tempos": [
+   "advento",
+   "solenidades"
+  ],
+  "ocasiao": "Advento / Solenidade da Imaculada Conceição"
+ },
+ "251": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "252": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "253": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": "Epifania"
+ },
+ "254": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "255": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "256": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "257": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "258": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "259": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "260": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "261": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "262": {
+  "tempos": [
+   "quaresma",
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "263": {
+  "tempos": [
+   "pentecostes"
+  ],
+  "ocasiao": ""
+ },
+ "264": {
+  "tempos": [
+   "pentecostes"
+  ],
+  "ocasiao": "Pentecostes e Crisma"
+ },
+ "265": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Santíssima Trindade"
+ },
+ "325": {
+  "tempos": [],
+  "ocasiao": "Apresentação dos dons"
+ },
+ "326": {
+  "tempos": [],
+  "ocasiao": "Apresentação dos dons"
+ },
+ "327": {
+  "tempos": [],
+  "ocasiao": "Apresentação dos dons"
+ },
+ "346": {
+  "tempos": [],
+  "ocasiao": "Oração Eucarística II"
+ },
+ "347": {
+  "tempos": [],
+  "ocasiao": "Oração Eucarística III"
+ },
+ "348": {
+  "tempos": [],
+  "ocasiao": "Oração Eucarística V"
+ },
+ "369": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "370": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "371": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "372": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "373": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "374": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "375": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "376": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": "Quarta-feira de Cinzas e Quaresma"
+ },
+ "377": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": "Quaresma Ano C"
+ },
+ "378": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "379": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "380": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "381": {
+  "tempos": [
+   "quaresma",
+   "solenidades"
+  ],
+  "ocasiao": "Quaresma (Transfiguração)"
+ },
+ "382": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "383": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "384": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "385": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": ""
+ },
+ "386": {
+  "tempos": [
+   "semana_santa",
+   "comum"
+  ],
+  "ocasiao": ""
+ },
+ "387": {
+  "tempos": [
+   "semana_santa",
+   "comum"
+  ],
+  "ocasiao": "Tempo Comum e Quinta-feira Santa"
+ },
+ "388": {
+  "tempos": [
+   "semana_santa",
+   "comum"
+  ],
+  "ocasiao": "Tempo Comum e Quinta-feira Santa"
+ },
+ "389": {
+  "tempos": [
+   "semana_santa",
+   "pascoa"
+  ],
+  "ocasiao": "Quinta-feira Santa e Tempo Pascal"
+ },
+ "390": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "391": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "392": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "393": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "394": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "395": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "396": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "397": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "398": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "399": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "400": {
+  "tempos": [
+   "pentecostes"
+  ],
+  "ocasiao": "Crisma"
+ },
+ "401": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Santíssima Trindade"
+ },
+ "402": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Santíssima Trindade"
+ },
+ "403": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Solenidade do Corpo e Sangue de Nosso Senhor Jesus Cristo"
+ },
+ "404": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Solenidade do Corpo e Sangue de Nosso Senhor Jesus Cristo"
+ },
+ "405": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Solenidade do Corpo e Sangue de Nosso Senhor Jesus Cristo"
+ },
+ "406": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Sagrado Coração de Jesus"
+ },
+ "407": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Sagrado Coração de Jesus"
+ },
+ "408": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Transfiguração do Senhor"
+ },
+ "409": {
+  "tempos": [
+   "pentecostes"
+  ],
+  "ocasiao": "Pentecostes e Crisma"
+ },
+ "410": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Mariano"
+ },
+ "411": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Mariano"
+ },
+ "412": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Mariano"
+ },
+ "460": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Solenidade de Cristo Rei"
+ },
+ "461": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": "Ladainha do Advento"
+ },
+ "462": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "463": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "464": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "465": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "466": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": ""
+ },
+ "467": {
+  "tempos": [
+   "pentecostes"
+  ],
+  "ocasiao": ""
+ },
+ "468": {
+  "tempos": [
+   "pentecostes"
+  ],
+  "ocasiao": "Pentecostes/Crisma"
+ },
+ "482": {
+  "tempos": [],
+  "ocasiao": "Pós-comunhão"
+ },
+ "483": {
+  "tempos": [],
+  "ocasiao": "Pós-comunhão"
+ },
+ "493": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Sexta-feira Santa"
+ },
+ "550": {
+  "tempos": [],
+  "ocasiao": "Ladainha Vocacional"
+ },
+ "560": {
+  "tempos": [],
+  "ocasiao": "Prece Vocacional"
+ },
+ "569": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "São Pedro e São Paulo"
+ },
+ "570": {
+  "tempos": [],
+  "ocasiao": "São Francisco de Assis"
+ },
+ "571": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "São José"
+ },
+ "572": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "São José"
+ },
+ "573": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "São José"
+ },
+ "574": {
+  "tempos": [],
+  "ocasiao": "Santa Rita de Cássia"
+ },
+ "575": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Santo Antônio"
+ },
+ "576": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Santo Antônio"
+ },
+ "577": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Santo Antônio"
+ },
+ "578": {
+  "tempos": [],
+  "ocasiao": "São Cristóvão"
+ },
+ "579": {
+  "tempos": [],
+  "ocasiao": "São João Batista"
+ },
+ "580": {
+  "tempos": [],
+  "ocasiao": "São Judas Tadeu"
+ },
+ "582": {
+  "tempos": [],
+  "ocasiao": "Ladainha de Todos os Santos (I)"
+ },
+ "583": {
+  "tempos": [],
+  "ocasiao": "Ladainha de Todos os Santos (II)"
+ },
+ "584": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "585": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "629": {
+  "tempos": [],
+  "ocasiao": "Exéquias"
+ },
+ "632": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Ladainha de Nossa Senhora"
+ },
+ "638": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Consagração a Nossa Senhora"
+ },
+ "641": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Domingo de Ramos"
+ },
+ "642": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Domingo de Ramos"
+ },
+ "643": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Quinta-Feira Santa (Rito do Lava-Pés)"
+ },
+ "644": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Quinta-feira Santa e Exaltação da Santa Cruz"
+ },
+ "645": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Sexta-Feira Santa, Via-Sacra, Beijo a Cristo na Cruz"
+ },
+ "646": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Sexta-Feira Santa (Adoração da Cruz)"
+ },
+ "647": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Sexta-Feira Santa (Adoração da Cruz)"
+ },
+ "648": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Sexta-Feira Santa (Adoração da Cruz)"
+ },
+ "649": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Via Sacra e Sexta-Feira Santa"
+ },
+ "650": {
+  "tempos": [
+   "semana_santa"
+  ],
+  "ocasiao": "Sexta-Feira Santa e Memória de mártires"
+ },
+ "651": {
+  "tempos": [],
+  "ocasiao": "Via-Sacra"
+ },
+ "652": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": "Quaresma / Via Sacra"
+ },
+ "654": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": "Proclamação da Páscoa"
+ },
+ "655": {
+  "tempos": [
+   "pascoa"
+  ],
+  "ocasiao": "Proclamação da Páscoa (versão adaptada)"
+ },
+ "656": {
+  "tempos": [],
+  "ocasiao": "Bodas"
+ },
+ "657": {
+  "tempos": [],
+  "ocasiao": "Semana da Família"
+ },
+ "670": {
+  "tempos": [
+   "pentecostes"
+  ],
+  "ocasiao": "Crisma – Rito da Unção"
+ },
+ "674": {
+  "tempos": [
+   "pentecostes"
+  ],
+  "ocasiao": "Sequência do Espírito Santo"
+ },
+ "675": {
+  "tempos": [
+   "pentecostes"
+  ],
+  "ocasiao": "Sequência de Pentecostes"
+ },
+ "680": {
+  "tempos": [],
+  "ocasiao": "Refrão Orante"
+ },
+ "681": {
+  "tempos": [],
+  "ocasiao": "Entrada"
+ },
+ "682": {
+  "tempos": [],
+  "ocasiao": "Entrada"
+ },
+ "683": {
+  "tempos": [],
+  "ocasiao": "Oferendas"
+ },
+ "684": {
+  "tempos": [],
+  "ocasiao": "Oferendas"
+ },
+ "685": {
+  "tempos": [],
+  "ocasiao": "Comunhão"
+ },
+ "686": {
+  "tempos": [],
+  "ocasiao": "Comunhão"
+ },
+ "687": {
+  "tempos": [],
+  "ocasiao": "Comunhão"
+ },
+ "688": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Mariano"
+ },
+ "689": {
+  "tempos": [],
+  "ocasiao": "Final"
+ },
+ "690": {
+  "tempos": [],
+  "ocasiao": "Despedida"
+ },
+ "691": {
+  "tempos": [],
+  "ocasiao": "Louvor final"
+ },
+ "700": {
+  "tempos": [
+   "advento"
+  ],
+  "ocasiao": ""
+ },
+ "701": {
+  "tempos": [
+   "natal"
+  ],
+  "ocasiao": ""
+ },
+ "702": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": "Celebração Penitencial"
+ },
+ "703": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": "Celebração Penitencial"
+ },
+ "704": {
+  "tempos": [
+   "quaresma"
+  ],
+  "ocasiao": "Celebração Penitencial"
+ },
+ "705": {
+  "tempos": [],
+  "ocasiao": "Renovação das Promessas do Batismo"
+ },
+ "706": {
+  "tempos": [],
+  "ocasiao": "Batismo"
+ },
+ "707": {
+  "tempos": [],
+  "ocasiao": "Procissão com o Santíssimo Sacramento"
+ },
+ "708": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Sequência da Solenidade do Corpo e Sangue de Nosso Senhor Jesus Cristo"
+ },
+ "712": {
+  "tempos": [],
+  "ocasiao": "Envio de ministros"
+ },
+ "713": {
+  "tempos": [
+   "solenidades"
+  ],
+  "ocasiao": "Santíssima Trindade"
+ },
+ "718": {
+  "tempos": [],
+  "ocasiao": "Mártires"
+ },
+ "727": {
+  "tempos": [],
+  "ocasiao": "Procissões"
+ },
+ "739": {
+  "tempos": [],
+  "ocasiao": "Abertura Ofício Divino das Comunidades"
+ }
+}

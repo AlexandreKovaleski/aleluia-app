@@ -127,6 +127,29 @@
   .pc { margin-top: var(--s-7); border-radius: var(--r-lg); overflow: hidden; border: 1px solid color-mix(in oklab, var(--ink) 10%, transparent); background: #f2f2f7; }
   .pc img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left; }
 
+  /* elements for another device stay out (the page script sets [hidden]) */
+  [data-os][hidden] { display: none !important; }
+
+  /* the questions, folded: one open at a time, the answer slides open where the browser can */
+  .faq-bloco { margin-top: var(--s-7); }
+  .faq-bloco > h3 { margin: 0 0 var(--s-2); font: 500 var(--t-small)/1.4 var(--font-text); color: var(--muted); letter-spacing: 0; }
+  .faq-erro { margin-top: var(--s-4); font-size: var(--t-small); }
+  .perguntas details { border-bottom: 1px solid var(--line); }
+  .perguntas summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: var(--s-4);
+    min-height: 44px; padding: var(--s-4) 0; font: 500 var(--t-lead)/1.4 var(--font-text); transition: color var(--dur) var(--ease); }
+  .perguntas summary::-webkit-details-marker { display: none; }
+  .perguntas summary::after { content: ""; flex: none; width: 9px; height: 9px; margin-right: 4px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+    opacity: .55; transform: translateY(-3px) rotate(45deg); transition: transform .3s var(--ease); }
+  .perguntas details[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+  .perguntas summary:hover { color: var(--action); }
+  .perguntas details p { margin: 0; padding: 0 0 var(--s-5); max-width: 64ch; color: var(--ink); }
+  @supports (interpolate-size: allow-keywords) {
+    .perguntas { interpolate-size: allow-keywords; }
+    .perguntas details::details-content { block-size: 0; overflow: clip; transition: block-size .35s var(--ease), content-visibility .35s allow-discrete; }
+    .perguntas details[open]::details-content { block-size: auto; }
+  }
+  @media (prefers-reduced-motion: reduce) { .perguntas details::details-content, .perguntas summary::after { transition: none; } }
+
   /* the three ways to get it: one row each, closed by a 1px rule */
   .get { margin: var(--s-6) 0 0; padding: 0; list-style: none; }
   .get li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--s-4); padding: var(--s-4) 0; border-bottom: 1px solid color-mix(in oklab, var(--ink) 12%, transparent); }
@@ -314,7 +337,7 @@
             <li><img class="ic" data-icon="whatsapp" src="assets/icons/whatsapp.svg" alt="" width="24" height="24" loading="lazy">Mande a lista pronta para a equipe de canto.</li>
             <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>Imprima a lista, um canto por folha, no tom escolhido.</li>
           </ul>
-          <p style="margin-top: var(--s-5)"><a class="link" href="#faq">Ver como importar uma lista</a></p>
+          <p style="margin-top: var(--s-5)"><a class="link" href="#faq-listas">Ver como importar uma lista</a></p>
         </div>
         <div class="frame frame--split span-6 start-7">
           <div class="stage stage--fade-b"><div class="at-rise"><div class="device"><img src="imagens/telas/4_lista.png" alt="Uma lista para a missa, com o tom de cada canto" width="500" height="1084" loading="lazy"></div></div></div>
@@ -336,46 +359,40 @@
     </div>
   </section>
 
-  <section class="section" id="faq" aria-labelledby="faq-h">
-    <div class="wrap">
-      <div class="grid">
-        <div class="span-5">
-          <h2 id="faq-h">Perguntas sobre o app</h2>
-          <p style="margin-top: var(--s-4)">Achou um erro num canto? Abra o canto e toque em ⋯ e Reportar problema.</p>
-        </div>
-        <div class="faq span-6 start-7">
-          <div class="faq__item"><h3>O app precisa de internet?</h3><p>Não. Cantos, partituras, orações e leituras ficam no aparelho. A internet serve para baixar correções, abrir as vídeo-aulas e sincronizar as listas.</p></div>
-          <div class="faq__item"><h3>Como instalo o app no Android?</h3><p>Abra o arquivo baixado e, na primeira vez, permita instalar desta fonte. Se o Play Protect avisar, toque em Mais detalhes e Instalar mesmo assim.</p></div>
-          <div class="faq__item"><h3>O Windows bloqueou o instalador do app.</h3><p>Clique em Mais informações e depois em Executar assim mesmo. O aviso aparece porque o programa ainda não tem assinatura digital paga.</p></div>
-          <div class="faq__item"><h3>Como uso o app no iPhone ou no iPad?</h3><p>Toque em Abrir no navegador. No Safari, toque em Compartilhar e em Adicionar à Tela de Início: o Aleluia! fica na tela como um app.</p></div>
-          <div class="faq__item"><h3>Como passo as listas do app para outro aparelho?</h3><p>Entre com a mesma conta Google nos dois, em Configurações. Sem conta, compartilhe a lista pelo WhatsApp e toque em Importar no outro aparelho.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
   <section class="section" id="baixar" aria-labelledby="baixar-h">
     <div class="wrap">
       <div class="grid fill">
         <div class="span-5">
           <h2 id="baixar-h">O app é grátis para Android e Windows. <span class="muted">No iPhone, use o navegador.</span></h2>
-          <p style="margin-top: var(--s-5)">O arquivo vem direto daqui, fora das lojas. Para atualizar, baixe de novo: as listas continuam. <span data-version>Versão 1.0.8</span>.</p>
+          <p style="margin-top: var(--s-5)"><span data-os="android windows other">O arquivo vem direto daqui, fora das lojas. Para atualizar, baixe de novo: as listas continuam. </span><span data-os="apple">Abre no Safari, sem instalar nada; dá para deixar na Tela de Início como um app. </span><span data-version>Versão 1.0.8</span>.</p>
           <ul class="get">
-            <li id="get-android">
+            <li id="get-android" data-os="android other">
               <span class="ic-tile ic-tile--40"><img class="ic" data-icon="android" src="assets/icons/android.svg" alt="" width="24" height="24" loading="lazy"></span>
               <span class="get__name">Android 7 ou mais novo<small data-size="Aleluia.apk">APK · 73&nbsp;MB</small></span>
               <a class="btn btn--secondary" href="https://github.com/AlexandreKovaleski/aleluia-app/releases/latest/download/Aleluia.apk">Baixar para Android</a>
             </li>
-            <li id="get-windows">
+            <li id="get-windows" data-os="windows other">
               <span class="ic-tile ic-tile--40"><img class="ic" data-icon="windows" src="assets/icons/windows.svg" alt="" width="24" height="24" loading="lazy"></span>
               <span class="get__name">Windows 10 ou 11<small data-size="Aleluia-Instalador.exe">Instalador · 46&nbsp;MB</small></span>
               <a class="btn btn--secondary" href="https://github.com/AlexandreKovaleski/aleluia-app/releases/latest/download/Aleluia-Instalador.exe">Baixar para Windows</a>
             </li>
-            <li id="get-web">
+            <li id="get-web" data-os="apple other">
               <span class="ic-tile ic-tile--40"><img class="ic" data-icon="safari" src="assets/icons/safari.svg" alt="" width="24" height="24" loading="lazy"></span>
               <span class="get__name">iPhone, iPad e outros<small>Sem instalar nada</small></span>
               <a class="btn btn--secondary" href="app/" data-web>Abrir no navegador</a>
             </li>
           </ul>
+          <div class="faq-bloco" id="faq">
+            <h3>Perguntas sobre o app</h3>
+            <div class="perguntas">
+              <details name="faq"><summary>O app precisa de internet?</summary><p>Não. Cantos, partituras, orações e leituras ficam no aparelho. A internet serve para baixar correções, abrir as vídeo-aulas e sincronizar as listas.</p></details>
+              <details name="faq" data-os="android other"><summary>Como instalo o app no Android?</summary><p>Abra o arquivo baixado e, na primeira vez, permita instalar desta fonte. Se o Play Protect avisar, toque em Mais detalhes e Instalar mesmo assim.</p></details>
+              <details name="faq" data-os="windows other"><summary>O Windows bloqueou o instalador do app.</summary><p>Clique em Mais informações e depois em Executar assim mesmo. O aviso aparece porque o programa ainda não tem assinatura digital paga.</p></details>
+              <details name="faq" data-os="apple other"><summary>Como uso o app no iPhone ou no iPad?</summary><p>Toque em Abrir no navegador. No Safari, toque em Compartilhar e em Adicionar à Tela de Início: o Aleluia! fica na tela como um app.</p></details>
+              <details name="faq" id="faq-listas"><summary>Como passo as listas do app para outro aparelho?</summary><p>Entre com a mesma conta Google nos dois, em Configurações. Sem conta, compartilhe a lista pelo WhatsApp e toque em Importar no outro aparelho.</p></details>
+            </div>
+            <p class="faq-erro">Achou um erro num canto? Abra o canto e toque em ⋯ e Reportar problema.</p>
+          </div>
         </div>
         <div class="frame frame--split frame--fill span-6 start-7">
           <div class="stage stage--fade-b"><div class="at-rise"><div class="device"><img src="imagens/6_navegador.png" alt="O Aleluia! aberto no navegador de um iPhone, no Rito da Comunhão" width="786" height="1318" loading="lazy"></div></div></div>
@@ -419,7 +436,7 @@
   (function () {
     var ua = navigator.userAgent;
     var platform = /Android/i.test(ua) ? 'android'
-      : /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? 'ios'
+      : /iPhone|iPad|iPod|Macintosh/i.test(ua) ? 'apple'
       : /Windows/i.test(ua) ? 'windows' : 'other';
     var files = {
       android: 'https://github.com/AlexandreKovaleski/aleluia-app/releases/latest/download/Aleluia.apk',
@@ -428,7 +445,7 @@
     if (files[platform]) {
       document.querySelectorAll('[data-get]').forEach(function (a) { a.href = files[platform]; });
     }
-    if (platform === 'ios') {
+    if (platform === 'apple') {
       var row = document.querySelector('[data-hero-actions]');
       var get = row.querySelector('[data-get]'), web = row.querySelector('[data-web]');
       get.className = 'btn btn--secondary';
@@ -440,9 +457,30 @@
       navGet.href = 'app/';
       document.querySelector('.nav__actions [data-web]').hidden = true;
     }
-    // a linha do aparelho de quem abriu vem primeiro na lista de download
-    var mine = document.getElementById({ android: 'get-android', windows: 'get-windows', ios: 'get-web' }[platform]);
-    if (mine) mine.parentNode.insertBefore(mine, mine.parentNode.firstElementChild);
+    // só o que é do aparelho de quem abriu (num aparelho desconhecido, tudo)
+    document.querySelectorAll('[data-os]').forEach(function (e) {
+      e.hidden = e.getAttribute('data-os').split(' ').indexOf(platform) < 0;
+    });
+    // a opção de download que sobrou é o botão principal da seção
+    if (platform !== 'other') {
+      var mine = document.querySelector('.get li:not([hidden]) .btn');
+      if (mine) mine.className = 'btn btn--primary';
+    }
+
+    // perguntas: abrir uma fecha a anterior (também onde o navegador não
+    // conhece o name="faq"); um link para uma delas abre a resposta
+    var faqs = document.querySelectorAll('.perguntas details');
+    faqs.forEach(function (d) {
+      d.addEventListener('toggle', function () {
+        if (d.open) faqs.forEach(function (o) { if (o !== d) o.open = false; });
+      });
+    });
+    function openFromHash() {
+      var t = location.hash && document.getElementById(location.hash.slice(1));
+      if (t && t.tagName === 'DETAILS') t.open = true;
+    }
+    window.addEventListener('hashchange', openFromHash);
+    openFromHash();
 
     // versão e tamanho dos arquivos da última publicação
     fetch('https://api.github.com/repos/AlexandreKovaleski/aleluia-app/releases/latest')

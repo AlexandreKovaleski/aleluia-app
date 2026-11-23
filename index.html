@@ -157,7 +157,7 @@
   [data-os][hidden] { display: none !important; }
 
   /* the questions, folded: one open at a time, the answer slides open where the browser can */
-  .faq-bloco { margin-top: var(--s-7); }
+  .faq-bloco { margin-top: var(--s-7); align-self: start; }
   .faq-bloco > h3 { margin: 0 0 var(--s-2); font: 500 var(--t-small)/1.4 var(--font-text); color: var(--muted); letter-spacing: 0; }
   .faq-erro { margin-top: var(--s-4); font-size: var(--t-small); }
   .perguntas details { border-bottom: 1px solid var(--line); }
@@ -181,10 +181,21 @@
   .get li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--s-4); padding: var(--s-4) 0; border-bottom: 1px solid color-mix(in oklab, var(--ink) 12%, transparent); }
   .get__name { display: grid; font-weight: 500; }
   .get__name small { font-weight: 400; font-size: var(--t-small); color: var(--muted); }
-  #baixar .device { width: 380px; border-radius: 40px; padding: 9px; }
-  #baixar .device img { border-radius: 32px; }
-  @media (max-width: 1023px) { #baixar .device { width: 300px; } #baixar .frame .stage > .at-rise { --ax: calc(50% - 150px); } }
-  @media (max-width: 639px) { #baixar { --hm: 2; } #baixar .device { width: 248px; border-radius: 28px; padding: 7px; } #baixar .device img { border-radius: 22px; } }
+  /* the install guide beside the button: numbered steps, the action first in each, a hint under it */
+  .guia { align-self: start; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: var(--s-6); }
+  .guia__bloco:not([hidden]) + .guia__bloco:not([hidden]) { margin-top: var(--s-7); }
+  /* computer: the guide fills the right column beside the button and the questions */
+  @media (min-width: 1024px) { #baixar .guia { grid-row: 1 / span 2; } #baixar .faq-bloco { grid-column: 1 / span 5; align-self: start; } }
+  .guia h3 { margin: 0 0 var(--s-5); font: var(--display-weight) var(--t-card)/1.3 var(--font-display); letter-spacing: -0.01em; }
+  .passos { margin: 0; padding: 0; list-style: none; counter-reset: passo; display: grid; gap: var(--s-4); }
+  .passos > li { counter-increment: passo; position: relative; padding-left: 44px; min-height: 30px; line-height: 1.5; }
+  .passos > li::before { content: counter(passo); position: absolute; left: 0; top: -1px; width: 30px; height: 30px; border-radius: 50%;
+    display: grid; place-items: center; background: var(--action); color: var(--action-ink); font: 600 14px/1 var(--font-text); }
+  .passos b { font-weight: 600; }
+  .passos > li > span { display: block; margin-top: var(--s-1); font-size: var(--t-small); color: var(--muted); }
+  .passos code { font: 500 .88em var(--font-mono); background: color-mix(in oklab, var(--ink) 6%, transparent); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+  @media (max-width: 1023px) { .guia { margin-top: var(--s-7); } }
+  @media (max-width: 639px) { #baixar { --hm: 2; } .guia { padding: var(--s-5); } }
   #baixar .frame .stage > .at-rise { --ax: calc(50% - 190px); --ay: 48px; }
   @media (max-width: 639px) {
     .get li { grid-template-columns: auto minmax(0, 1fr); }
@@ -388,7 +399,7 @@
 
   <section class="section" id="baixar" aria-labelledby="baixar-h">
     <div class="wrap">
-      <div class="grid fill">
+      <div class="grid">
         <div class="span-5">
           <h2 id="baixar-h">O app é grátis para Android e Windows. <span class="muted">No iPhone, use o navegador.</span></h2>
           <p style="margin-top: var(--s-5)"><span data-os="android windows other">O arquivo vem direto daqui, fora das lojas. Para atualizar, baixe de novo: as listas continuam. </span><span data-os="apple">Abre no Safari, sem instalar nada; dá para deixar na Tela de Início como um app. </span><span data-version>Versão 1.0.8</span>.</p>
@@ -409,20 +420,61 @@
               <a class="btn btn--secondary" href="app/" data-web>Abrir no navegador</a>
             </li>
           </ul>
-          <div class="faq-bloco" id="faq">
-            <h3>Perguntas sobre o app</h3>
-            <div class="perguntas">
-              <details name="faq"><summary>O app precisa de internet?</summary><p>Não. Cantos, partituras, orações e leituras ficam no aparelho. A internet serve para baixar correções, abrir as vídeo-aulas e sincronizar as listas.</p></details>
-              <details name="faq" data-os="android other"><summary>Como instalo o app no Android?</summary><p>Abra o arquivo baixado e, na primeira vez, permita instalar desta fonte. Se o Play Protect avisar, toque em Mais detalhes e Instalar mesmo assim.</p></details>
-              <details name="faq" data-os="windows other"><summary>O Windows bloqueou o instalador do app.</summary><p>Clique em Mais informações e depois em Executar assim mesmo. O aviso aparece porque o programa ainda não tem assinatura digital paga.</p></details>
-              <details name="faq" data-os="apple other"><summary>Como uso o app no iPhone ou no iPad?</summary><p>Toque em Abrir no navegador. No Safari, toque em Compartilhar e em Adicionar à Tela de Início: o Aleluia! fica na tela como um app.</p></details>
-              <details name="faq" id="faq-listas"><summary>Como passo as listas do app para outro aparelho?</summary><p>Entre com a mesma conta Google nos dois, em Configurações. Sem conta, compartilhe a lista pelo WhatsApp e toque em Importar no outro aparelho.</p></details>
-            </div>
-            <p class="faq-erro">Achou um erro num canto? Abra o canto e toque em ⋯ e Reportar problema.</p>
+        </div>
+        <!-- passo a passo de instalação: só o do aparelho de quem abriu (num aparelho desconhecido, os três) -->
+        <div class="guia span-6 start-7" id="passo-a-passo">
+          <div class="guia__bloco" data-os="android other">
+            <h3>Passo a passo no Android</h3>
+            <ol class="passos">
+              <li><b>Toque em Baixar para Android</b>, aqui no celular. O navegador baixa o arquivo <code>Aleluia.apk</code>.
+                <span>Se aparecer “Este tipo de arquivo pode danificar seu dispositivo”, toque em <b>Baixar mesmo assim</b>.</span></li>
+              <li><b>Abra o arquivo baixado</b>: toque em <b>Abrir</b> no aviso de download que aparece na parte de baixo da tela.
+                <span>Se o aviso já sumiu, abra o app <b>Arquivos</b> (no Samsung, <b>Meus arquivos</b>), entre em <b>Downloads</b> e toque em <code>Aleluia.apk</code>.</span></li>
+              <li><b>Dê a permissão</b>: na primeira vez, o Android avisa que não tem permissão para instalar apps desta fonte. Toque em <b>Configurações</b>.</li>
+              <li><b>Ligue “Permitir desta fonte”</b> e toque na seta de voltar (←).
+                <span>No Samsung o nome é “Permitir desta origem”. No Xiaomi, a verificação de segurança pode levar alguns segundos antes de liberar o botão.</span></li>
+              <li><b>Toque em Instalar.</b>
+                <span>Se o Google Play Protect avisar que o app não é conhecido, toque em <b>Mais detalhes</b> e depois em <b>Instalar mesmo assim</b>.</span></li>
+              <li><b>Pronto: toque em Abrir.</b> O Aleluia! fica na tela de apps do celular.
+                <span>Para atualizar, baixe e instale de novo do mesmo jeito: as listas, os tons e os favoritos continuam.</span></li>
+            </ol>
+          </div>
+          <div class="guia__bloco" data-os="windows other">
+            <h3>Passo a passo no Windows</h3>
+            <ol class="passos">
+              <li><b>Clique em Baixar para Windows.</b> O arquivo <code>Aleluia-Instalador.exe</code> vai para a pasta <b>Downloads</b>.
+                <span>Se o navegador avisar que o arquivo não é baixado com frequência, escolha <b>Manter</b>. No Edge: <b>⋯</b> → <b>Manter</b> → <b>Mostrar mais</b> → <b>Manter mesmo assim</b>.</span></li>
+              <li><b>Abra o instalador</b>: clique nele na lista de downloads do navegador ou na pasta <b>Downloads</b>.</li>
+              <li><b>Libere o programa</b>: se aparecer a tela azul “O Windows protegeu o computador”, clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>.
+                <span>O aviso aparece porque o programa ainda não tem assinatura digital paga.</span></li>
+              <li><b>Instale</b>: deixe marcado “Criar um ícone na Área de Trabalho” se quiser o atalho, clique em <b>Avançar</b> e depois em <b>Instalar</b>.
+                <span>Não pede senha de administrador.</span></li>
+              <li><b>Pronto: clique em Concluir.</b> O app abre, e depois é só procurar <b>Aleluia</b> no menu Iniciar.
+                <span>Para atualizar, rode o instalador novo: ele troca a versão e mantém as listas.</span></li>
+            </ol>
+          </div>
+          <div class="guia__bloco" data-os="apple other">
+            <h3>Passo a passo no iPhone e no iPad</h3>
+            <ol class="passos">
+              <li><b>Use o Safari</b> (o navegador da bússola azul) para abrir esta página.</li>
+              <li><b>Toque em Abrir no navegador.</b> O Aleluia! abre nesta mesma aba.</li>
+              <li><b>Toque em Compartilhar</b> (o quadrado com a seta para cima), na barra do Safari.
+                <span>No iPhone ela fica embaixo; no iPad, no alto, ao lado do endereço. Se não aparecer, toque em <b>⋯</b> e depois em <b>Compartilhar</b>.</span></li>
+              <li><b>Toque em Adicionar à Tela de Início.</b>
+                <span>Se não estiver na lista, role a lista para baixo.</span></li>
+              <li><b>Toque em Adicionar</b>, no canto de cima, à direita.</li>
+              <li><b>Pronto:</b> o ícone do Aleluia! fica na Tela de Início e abre em tela cheia, como um app.
+                <span>No Mac: abra no Safari, clique em Abrir no navegador e use <b>Arquivo</b> → <b>Adicionar ao Dock</b>.</span></li>
+            </ol>
           </div>
         </div>
-        <div class="frame frame--split frame--fill span-6 start-7">
-          <div class="stage stage--fade-b"><div class="at-rise"><div class="device"><img src="imagens/6_navegador.png" alt="O Aleluia! aberto no navegador de um iPhone, no Rito da Comunhão" width="786" height="1318" loading="lazy"></div></div></div>
+        <div class="faq-bloco span-5" id="faq">
+          <h3>Perguntas sobre o app</h3>
+          <div class="perguntas">
+            <details name="faq"><summary>O app precisa de internet?</summary><p>Não. Cantos, partituras, orações e leituras ficam no aparelho. A internet serve para baixar correções, abrir as vídeo-aulas e sincronizar as listas.</p></details>
+            <details name="faq" id="faq-listas"><summary>Como passo as listas do app para outro aparelho?</summary><p>Entre com a mesma conta Google nos dois, em Configurações. Sem conta, compartilhe a lista pelo WhatsApp e toque em Importar no outro aparelho.</p></details>
+          </div>
+          <p class="faq-erro">Achou um erro num canto? Abra o canto e toque em ⋯ e Reportar problema.</p>
         </div>
       </div>
     </div>

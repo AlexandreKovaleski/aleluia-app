@@ -46,10 +46,6 @@
 <link rel="stylesheet" href="assets/ui/toggles/fragment.css">
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script src="assets/backgrounds/backgrounds.js"></script>
-<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
-<link rel="modulepreload" href="assets/moments/moments.js">
-<link rel="modulepreload" href="assets/moments/lib.js">
-<link rel="modulepreload" href="assets/moments/iris-opens/moment.js">
 <style>
   /* the client's logo in the bar and the footer */
   a, button { touch-action: manipulation; }
@@ -67,7 +63,8 @@
   .al-win__bar { display: flex; align-items: center; gap: 12px; height: 40px; padding: 0 14px; border-bottom: 1px solid rgb(0 0 0 / .07); font-size: 13px; color: #6d6d6f; }
   .al-win__bar b { font-weight: 500; color: #1d1d1f; }
   .al-dots { display: flex; gap: 6px; } .al-dots i { width: 10px; height: 10px; border-radius: 50%; background: #dcdfe2; }
-  .al-win__body { display: grid; grid-template-columns: 280px 1fr; min-height: 440px; }
+  /* taller than any first screen leaves for it: the frame always cuts it well inside its fade */
+  .al-win__body { display: grid; grid-template-columns: 280px 1fr; min-height: 600px; }
   .al-list { border-right: 1px solid rgb(0 0 0 / .07); padding: 12px; display: grid; align-content: start; gap: 2px; background: #f5f5f7; }
   .al-search { height: 34px; margin-bottom: 8px; border-radius: 10px; background: #e7e7ea; display: flex; align-items: center; padding: 0 12px; color: #6d6d6f; font-size: 13px; }
   .al-sec { margin: 4px 8px 6px; font-size: 13px; color: #6d6d6f; }
@@ -110,11 +107,18 @@
   .device img { display: block; width: 100%; height: auto; border-radius: 22px; }
   #recursos .panel { --p-h: 300px; }
   #recursos .stage > .at-rise { --ax: calc(50% - 124px); --ay: 40px; }
-  #recursos .stage > .at-right { --ax: 32px; --ay: 48px; }
+  /* the switches in the calm middle of their tall panel; on a phone the panel is short: from the top, cut below */
+  @media (max-width: 639px) { #recursos .stage > .at-center { top: 24px; translate: -50% 0; } }
   @media (max-width: 639px) { #recursos .panel { --p-h: 196px; } #recursos .stage > .at-rise { --ay-sm: 24px; } }
 
   /* the lists split: the phone in the frame */
-  #listas .frame .stage > .at-rise { --ax: calc(50% - 124px); --ay: 56px; }
+  #listas .device { width: 340px; border-radius: 38px; padding: 9px; }
+  #listas .device img { border-radius: 30px; }
+  #listas .frame .stage > .at-rise { --ax: calc(50% - 170px); --ay: 48px; }
+  @media (max-width: 1023px) { #listas .device { width: 300px; } #listas .frame .stage > .at-rise { --ax: calc(50% - 150px); } }
+  /* on a computer the phone's frame runs down to the section's foot (no dark band left under it) */
+  @media (min-width: 1024px) { #listas .wrap > .grid { flex: 1 1 0; min-height: 0; } #listas .frame--split { height: 100%; } }
+  @media (max-width: 639px) { #listas .device { width: 248px; border-radius: 28px; padding: 7px; } #listas .device img { border-radius: 22px; } #listas .frame .stage > .at-rise { --ax: calc(50% - 124px); --ay: 32px; } }
   .facts { margin: var(--s-5) 0 0; padding: 0; list-style: none; display: grid; gap: var(--s-3); }
   .facts li { display: flex; gap: var(--s-3); align-items: flex-start; }
   .facts .ic { --ic-s: 22px; margin-top: 1px; }
@@ -133,9 +137,6 @@
   @media (max-width: 1023px) { #baixar .device { width: 300px; } #baixar .frame .stage > .at-rise { --ax: calc(50% - 150px); } }
   @media (max-width: 639px) { #baixar { --hm: 2; } #baixar .device { width: 248px; border-radius: 28px; padding: 7px; } #baixar .device img { border-radius: 22px; } }
   #baixar .frame .stage > .at-rise { --ax: calc(50% - 190px); --ay: 48px; }
-  /* the cards end on their content: the dark band's moment opens a stage inside its own edge, so the
-     gap above it stays like the others */
-  @media (min-width: 1024px) { #recursos .wrap > .grid:last-child { align-self: start; } #recursos .group > .grid:last-child { flex: none; } }
   @media (max-width: 639px) {
     .get li { grid-template-columns: auto minmax(0, 1fr); }
     .get li .btn { grid-column: 1 / -1; width: 100%; }
@@ -148,7 +149,7 @@
      mark: the client's logo (brasão), palette: the client's own colours (start.mjs brand: the Aleluia wine #8c1d40
      on #f5f5f7, ink #1d1d1f), type reddit (Reddit Sans + JetBrains Mono), radius round, ground sky,
      effect gradient-mesh in the hero frame
-     moments: iris-opens on #listas (the dark band) -->
+     moments: none (the user found the iris on #listas odd; the hero window's key change is the page's motion) -->
 <header class="nav">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Pular para o conteúdo</a>
@@ -205,7 +206,7 @@
           <a class="btn btn--secondary" href="app/" data-web>Abrir no navegador</a>
         </div>
       </div>
-      <div class="hero__window">
+      <div class="hero__window" data-ui-pause-host>
         <div class="ly-piece al-win ui ui-app" role="img" aria-label="O app Aleluia! com o índice dos cantos ao lado do Santo 339 aberto na cifra, que passa do tom A para o tom B">
           <div class="al-win__bar"><span class="al-dots"><i></i><i></i><i></i></span><b>Aleluia! Cantos e Orações</b><span>Índice · Santo</span></div>
           <div class="al-win__body">
@@ -269,7 +270,7 @@
         <article class="card card--row card--open span-6">
           <h3>Rola o canto sozinho durante a missa</h3>
           <p>Rolagem automática na velocidade do canto, pedal Bluetooth para passar a página e tela sempre acesa.</p>
-          <div class="panel"><div class="stage stage--fade-b"><div class="at-right to-edge" data-ui-loop role="img" aria-label="Opções durante o canto: rolagem automática, pedal Bluetooth e tela sempre acesa ligados, modo noturno desligado">
+          <div class="panel"><div class="stage stage--fade-b"><div class="at-center" data-ui-loop role="img" aria-label="Opções durante o canto: rolagem automática, pedal Bluetooth e tela sempre acesa ligados, modo noturno desligado">
             <div class="ui ui-panel ui-toggles" data-ui="toggles">
               <div class="ui-head">
                 <svg class="ui-icon ui-toggles__ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 12.5V4l7-1.5v8.5"/><circle cx="4.5" cy="12.5" r="1.8"/><circle cx="11.5" cy="11" r="1.8"/></svg>
@@ -302,7 +303,7 @@
     </div>
   </section>
 
-  <section class="section ground-inverse" id="listas" aria-labelledby="listas-h" data-moment="iris-opens" data-moment-opts='{"from": "base"}'>
+  <section class="section ground-inverse" id="listas" aria-labelledby="listas-h">
     <div class="wrap">
       <div class="grid">
         <div class="span-5">
@@ -396,19 +397,17 @@
     </div>
     <div class="closing__links">
       <div class="grid">
-        <div class="span-4 stack-4">
+        <div class="span-6 stack-4">
           <a class="nav__logo" href="#top"><img src="imagens/brasao.png" alt="" width="28" height="28" loading="lazy"><span translate="no">Aleluia!</span></a>
           <p class="footer__lede">O livro de cantos da Arquidiocese de Passo Fundo.</p>
         </div>
         <div class="span-2 footer__col"><h3>Recursos</h3><ul><li><a href="#recursos">Partitura e cifra</a></li><li><a href="#listas">Listas</a></li><li><a href="#computador">Computador</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Instalar</h3><ul><li><a href="#get-android">Android</a></li><li><a href="#get-windows">Windows</a></li><li><a href="#get-web">iPhone e iPad</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Dúvidas</h3><ul><li><a href="#faq">Perguntas frequentes</a></li><li><a href="https://github.com/AlexandreKovaleski/aleluia-app/releases">Todas as versões</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>Projeto</h3><ul><li><a href="https://github.com/AlexandreKovaleski/aleluia-app">Página no GitHub</a></li></ul></div>
       </div>
       <div class="footer__legal">
         <span>&copy; 2026 Aleluia! Cantos e Orações · Arquidiocese de Passo Fundo</span>
         <div class="socials"></div>
-        <span>Android, Windows, Safari, Google e WhatsApp são marcas de seus donos</span>
       </div>
     </div>
   </div>

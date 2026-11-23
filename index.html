@@ -246,7 +246,8 @@
       <div class="nav__item"><a class="nav__link" href="#faq">Dúvidas</a></div>
     </nav>
     <div class="nav__actions">
-      <a class="nav__link" href="app/" data-web>Abrir no navegador</a>
+      <!-- o link da versão online: só onde não há app para baixar (no Apple o botão principal já abre ela) -->
+      <a class="nav__link" href="app/" data-web data-os="other">Abrir no navegador</a>
       <a class="btn btn--primary" href="#baixar" data-get>Baixar o app</a>
     </div>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
@@ -264,7 +265,7 @@
         <p class="hero__lead">O livro <span translate="no">Aleluia!</span> da Arquidiocese de Passo Fundo com mais de 770 cantos: partitura, cifra em qualquer tom, letra e a liturgia do dia, também sem internet.</p>
         <div class="btn-row" data-hero-actions>
           <a class="btn btn--primary" href="#baixar" data-get>Baixar o app</a>
-          <a class="btn btn--secondary" href="app/" data-web>Abrir no navegador</a>
+          <a class="btn btn--secondary" href="app/" data-web data-os="apple other">Abrir no navegador</a>
         </div>
       </div>
       <div class="hero__window" data-ui-pause-host>
@@ -498,7 +499,7 @@
           <p class="footer__lede">O livro de cantos da Arquidiocese de Passo Fundo.</p>
         </div>
         <div class="span-2 footer__col"><h3>Recursos</h3><ul><li><a href="#recursos">Partitura e cifra</a></li><li><a href="#listas">Listas</a></li><li><a href="#computador">Computador</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>Instalar</h3><ul><li><a href="#get-android">Android</a></li><li><a href="#get-windows">Windows</a></li><li><a href="#get-web">iPhone e iPad</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Instalar</h3><ul><li data-os="android other"><a href="#get-android">Android</a></li><li data-os="windows other"><a href="#get-windows">Windows</a></li><li data-os="apple other"><a href="#get-web">iPhone e iPad</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Dúvidas</h3><ul><li><a href="#faq">Perguntas frequentes</a></li><li><a href="https://github.com/AlexandreKovaleski/aleluia-app/releases">Todas as versões</a></li></ul></div>
       </div>
       <div class="footer__legal">
@@ -530,11 +531,10 @@
       get.className = 'btn btn--secondary';
       web.className = 'btn btn--primary';
       row.insertBefore(web, get);
-      // the bar's button opens the app in Safari too, and its plain link goes
+      // the bar's button opens the app in Safari too (its plain link stays out: data-os)
       var navGet = document.querySelector('.nav__actions [data-get]');
       navGet.textContent = 'Abrir no navegador';
       navGet.href = 'app/';
-      document.querySelector('.nav__actions [data-web]').hidden = true;
     }
     // só o que é do aparelho de quem abriu (num aparelho desconhecido, tudo)
     document.querySelectorAll('[data-os]').forEach(function (e) {

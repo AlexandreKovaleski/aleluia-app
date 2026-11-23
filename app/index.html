@@ -41,6 +41,18 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <!-- a logo e o indicador aparecem na hora, enquanto o app baixa (antes era
+       uma tela branca); somem quando o Flutter desenha (web/carregando.js) -->
+  <style>
+    html, body { margin: 0; background: #fff; }
+    #carregando { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px; background: #fff; }
+    #carregando img { width: 260px; max-width: 72vw; height: auto; }
+    #carregando i { width: 28px; height: 28px; border-radius: 50%; border: 3px solid #f0d9e1; border-top-color: #8C1D40; animation: girar .8s linear infinite; }
+    @keyframes girar { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { #carregando i { animation-duration: 2.4s; } }
+  </style>
+  <div id="carregando" role="status" aria-label="Abrindo o Aleluia"><img src="assets/assets/branding/logo.png" alt="" width="1800" height="506"><i></i></div>
+  <script src="carregando.js"></script>
   <!--
     You can customize the "flutter_bootstrap.js" script.
     This is useful to provide a custom configuration to the Flutter loader

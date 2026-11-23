@@ -10100,7 +10100,7 @@ A.kx(B.l.ga3(s),null)
 if(s.length>1)A.CU(s[1])
 return!0},
 bSJ(a){var s=a.c,r=s.length===0?"":"\n\nNovidades:\n"+new A.ab(s,new A.bf5(),A.a2(s).i("ab<1,e>")).bp(0,"\n")
-return"A vers\xe3o "+A.k(a.a)+" do Aleluia! est\xe1 dispon\xedvel (voc\xea tem a 1.0.8)."+r+"\n\nBasta instalar por cima: suas listas e favoritos continuam."},
+return"A vers\xe3o "+A.k(a.a)+" do Aleluia! est\xe1 dispon\xedvel (voc\xea tem a 1.0.9)."+r+"\n\nBasta instalar por cima: suas listas e favoritos continuam."},
 YM:function YM(a){var _=this
 _.a=null
 _.P$=0
@@ -14784,7 +14784,7 @@ var $async$ar1=A.p(function(b,c){if(b===1)return A.l(c,r)
 for(;;)switch(s){case 0:o=J
 s=3
 return A.c($.aM().lE("tour_"+a),$async$ar1)
-case 3:p=o.d(c,"1.0.8")
+case 3:p=o.d(c,"1.0.9")
 q=!p
 s=1
 break
@@ -70869,7 +70869,7 @@ s=3
 return A.c(A.Ig(n,A.b([new A.ip(m,"Buscar","Procure um canto pelo n\xfamero, pelo t\xedtulo, pelo tempo lit\xfargico ou por qualquer trecho da letra.",null),new A.ip(l,"Liturgia do dia","O tempo, a cor e as leituras da missa de hoje, com os cantos do tempo. As setas mostram outros dias; os bot\xf5es abrem as leituras e criam a lista da missa.",null),new A.ip(k,"\xcdndice do livro",'O livro inteiro, parte por parte, como no impresso. Em "Outros" ficam os cantos que voc\xea adicionar.',null),new A.ip($.bob(),"Minhas listas","As listas da missa, com o tom e a rolagem de cada canto, para compartilhar pelo WhatsApp e imprimir.",null),new A.ip($.bo8(),"Nova lista","O + cria uma lista. A seta ao lado importa uma lista recebida (a mensagem ou o arquivo .aleluia).",new A.b0X(o)),new A.ip($.boc(),"Configura\xe7\xf5es","As formas de ver os cantos, o modo noturno, o pedal Bluetooth, o tamanho da letra e as atualiza\xe7\xf5es.",null),new A.ip($.bo3(),"Conta e equipes","Entre com o Google para ter as listas em todos os aparelhos e montar equipes que compartilham listas.",new A.b0Y(o))],t.Fm),A.b([l,k],t.TY)),$async$zr)
 case 3:o.$1(0)
 s=4
-return A.c($.aM().kn("tour_inicio","1.0.8"),$async$zr)
+return A.c($.aM().kn("tour_inicio","1.0.9"),$async$zr)
 case 4:case 1:return A.m(q,r)}})
 return A.n($async$zr,r)},
 m(){$.biw().T(this.gaaF())
@@ -73616,7 +73616,7 @@ m=$.boe()
 s=6
 return A.c(A.Ig(o,A.b([new A.ip(n,"Formas de ver","Partitura, partitura com cifra, cifra ou s\xf3 a letra: toque para trocar. Em Configura\xe7\xf5es voc\xea escolhe quais aparecem.",null),new A.ip(m,"Tom","Na cifra, toque para passar o canto para outro tom. O app guarda o tom de cada canto; numa lista, vale s\xf3 para aquela lista.",null),new A.ip($.bo5(),"Rolagem autom\xe1tica","O play faz a tela descer sozinha; o 1\xd7 muda a velocidade. O pedal Bluetooth tamb\xe9m vira a p\xe1gina.",null),new A.ip($.bBl(),"Gravar","Grave o canto no ensaio. As grava\xe7\xf5es ficam guardadas junto do canto.",null),new A.ip($.bo7(),"Tamanho da letra","Aumenta ou diminui a letra da cifra e da letra do canto.",null),new A.ip($.bof(),"V\xeddeo-aula","Abre a v\xeddeo-aula do canto no YouTube, quando h\xe1 uma.",null),new A.ip($.bo4(),"P\xf4r numa lista","Coloca este canto numa das suas listas, com o tom de agora.",null),new A.ip($.bo9(),"Mais op\xe7\xf5es","Imprimir, ver as grava\xe7\xf5es e avisar um erro no canto (Reportar problema): a mensagem vai pronta pelo WhatsApp.",null)],t.Fm),A.b([n,m],t.TY)),$async$z6)
 case 6:s=7
-return A.c($.aM().kn("tour_canto","1.0.8"),$async$z6)
+return A.c($.aM().kn("tour_canto","1.0.9"),$async$z6)
 case 7:case 1:return A.m(q,r)}})
 return A.n($async$z6,r)},
 E_(){var s=0,r=A.o(t.H),q,p=this,o,n,m,l

@@ -1,11 +1,12 @@
 {
- "versao": "1.0.8",
- "build": 9,
+ "versao": "1.0.9",
+ "build": 10,
  "novidades": [
-  "Rolagem automática não pula mais ao voltar de outro app",
-  "Busca mais rápida, e a de adicionar cantos na lista acha palavras sem acento",
-  "Listas de missa: reordenar sem piscar e toques rápidos sem erro",
-  "Ao excluir um canto adicionado, as gravações dele saem junto",
-  "Correções na importação de cantos e no envio de listas e seções"
+  "Entrar com a conta Google: listas e cantos adicionados em todos os aparelhos",
+  "Equipes: compartilhe listas com quem canta com você",
+  "Listas e seções vão como arquivo .aleluia, que abre direto no app",
+  "Tutorial que mostra o que cada opção faz",
+  "Voltar fecha a parte aberta do índice",
+  "Mais segurança nos links das vídeo-aulas e no login"
  ]
 }

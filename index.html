@@ -516,7 +516,9 @@
   // baixa o arquivo certo; no iPhone e no iPad, o navegador vem primeiro
   (function () {
     var ua = navigator.userAgent;
-    var platform = /Android/i.test(ua) ? 'android'
+    // tablets Android abrem os sites na "versão para computador": dizem só
+    // "Linux", sem "Android"; a tela de toque os denuncia
+    var platform = /Android/i.test(ua) || (/Linux/i.test(ua) && navigator.maxTouchPoints > 0) ? 'android'
       : /iPhone|iPad|iPod|Macintosh/i.test(ua) ? 'apple'
       : /Windows/i.test(ua) ? 'windows' : 'other';
     var files = {

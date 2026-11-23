@@ -46,6 +46,10 @@
 <link rel="stylesheet" href="assets/ui/toggles/fragment.css">
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script src="assets/backgrounds/backgrounds.js"></script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/iris-opens/moment.js">
 <style>
   /* the client's logo in the bar and the footer */
   a, button { touch-action: manipulation; }
@@ -127,6 +131,28 @@
   .pc { margin-top: var(--s-7); border-radius: var(--r-lg); overflow: hidden; border: 1px solid color-mix(in oklab, var(--ink) 10%, transparent); background: #f2f2f7; }
   .pc img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left; }
 
+  /* a link glides there through the page (the page script); a target inside a section stops below the bar */
+  #faq, #faq-listas, .get li { scroll-margin-top: calc(var(--nav) + var(--s-5)); }
+
+  /* each section fades and shrinks a little as it enters and as it leaves the screen, the way the hero's
+     window fades at its foot; whole while it fills the screen. Only where the browser ties animations to
+     the scroll, never under reduced motion */
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      main > section > .wrap, footer.closing > .wrap {
+        animation: esmaecer linear both; animation-timeline: view(); animation-range: cover 0% cover 100%;
+        transform-origin: 50% 50%;
+      }
+      /* a section with the keyboard's focus in it stays whole: the focused control is always clear */
+      main > section > .wrap:focus-within, footer.closing > .wrap:focus-within { animation: none; }
+      @keyframes esmaecer {
+        0%   { opacity: .15; transform: scale(.94); }
+        20%, 86% { opacity: 1; transform: none; }
+        100% { opacity: .15; transform: scale(.94); }
+      }
+    }
+  }
+
   /* elements for another device stay out (the page script sets [hidden]) */
   [data-os][hidden] { display: none !important; }
 
@@ -172,7 +198,8 @@
      mark: the client's logo (brasão), palette: the client's own colours (start.mjs brand: the Aleluia wine #8c1d40
      on #f5f5f7, ink #1d1d1f), type reddit (Reddit Sans + JetBrains Mono), radius round, ground sky,
      effect gradient-mesh in the hero frame
-     moments: none (the user found the iris on #listas odd; the hero window's key change is the page's motion) -->
+     moments: iris-opens on #listas, opening evenly until the band fills the screen (opts span/ease, added to our copy)
+     motion: smooth anchor scrolling; each section fades and shrinks a little as it enters and leaves (scroll-driven, as the user asked) -->
 <header class="nav">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Pular para o conteúdo</a>
@@ -326,7 +353,7 @@
     </div>
   </section>
 
-  <section class="section ground-inverse" id="listas" aria-labelledby="listas-h">
+  <section class="section ground-inverse" id="listas" aria-labelledby="listas-h" data-moment="iris-opens" data-moment-opts='{"from": "base", "span": 0.98, "ease": "even"}'>
     <div class="wrap">
       <div class="grid">
         <div class="span-5">
@@ -481,6 +508,22 @@
     }
     window.addEventListener('hashchange', openFromHash);
     openFromHash();
+
+    // um link para outra parte da página desliza até lá (em vez de pular);
+    // o Tab do teclado continua indo direto
+    var calmo = window.matchMedia('(prefers-reduced-motion: reduce)');
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      // o 'Pular para o conteúdo' fica nativo: leva o foco do teclado para o conteúdo
+      if (!a || a.classList.contains('skip-link') || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
+      var id = a.getAttribute('href').slice(1);
+      var alvo = id ? document.getElementById(id) : null;
+      if (!alvo) return;
+      e.preventDefault();
+      if (alvo.tagName === 'DETAILS') alvo.open = true;
+      alvo.scrollIntoView({ behavior: calmo.matches ? 'auto' : 'smooth', block: 'start' });
+      if (history.pushState) history.pushState(null, '', '#' + id);
+    });
 
     // versão e tamanho dos arquivos da última publicação
     fetch('https://api.github.com/repos/AlexandreKovaleski/aleluia-app/releases/latest')

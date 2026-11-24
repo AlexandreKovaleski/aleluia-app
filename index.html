@@ -194,6 +194,11 @@
   .passos b { font-weight: 600; }
   .passos > li > span { display: block; margin-top: var(--s-1); font-size: var(--t-small); color: var(--muted); }
   .passos code { font: 500 .88em var(--font-mono); background: color-mix(in oklab, var(--ink) 6%, transparent); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+  /* os vídeos do passo a passo (verticais, gravados no Android) */
+  .videos { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); margin-top: var(--s-6); }
+  .videos figure { margin: 0; min-width: 0; }
+  .videos video { display: block; width: 100%; aspect-ratio: 9 / 16; border-radius: var(--r-md, 12px); background: var(--vinho, #5a0f27); }
+  .videos__nome { margin: 0 0 var(--s-2); font: 600 var(--t-small)/1.4 var(--font-text); }
   @media (max-width: 1023px) { .guia { margin-top: var(--s-7); } }
   @media (max-width: 639px) { #baixar { --hm: 2; } .guia { padding: var(--s-5); } }
   #baixar .frame .stage > .at-rise { --ax: calc(50% - 190px); --ay: 48px; }
@@ -440,6 +445,10 @@
               <li><b>Pronto: toque em Abrir.</b> O Aleluia! fica na tela de apps do celular.
                 <span>Para atualizar, baixe e instale de novo do mesmo jeito: as listas, os tons e os favoritos continuam.</span></li>
             </ol>
+            <div class="videos">
+              <figure><p class="videos__nome">Instalar em vídeo</p><video controls playsinline preload="none" poster="videos/instalar-android.jpg" src="videos/instalar-android.mp4" aria-label="Vídeo: como instalar o Aleluia! no Android"></video></figure>
+              <figure><p class="videos__nome">Atualizar em vídeo</p><video controls playsinline preload="none" poster="videos/atualizar-android.jpg" src="videos/atualizar-android.mp4" aria-label="Vídeo: como atualizar o Aleluia! no Android"></video></figure>
+            </div>
           </div>
           <div class="guia__bloco" data-os="windows other">
             <h3>Passo a passo no Windows</h3>

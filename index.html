@@ -198,6 +198,8 @@
   .videos { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); margin-top: var(--s-6); }
   .videos figure { margin: 0; min-width: 0; }
   .videos.videos--largo { grid-template-columns: 1fr; }
+  .video-uso { max-width: 300px; margin: var(--s-5) auto var(--s-7); }
+  .video-uso video { display: block; width: 100%; aspect-ratio: 9 / 16; border-radius: 12px; background: #5a0f27; }
   .videos.videos--largo video { aspect-ratio: 16 / 9; }
   .videos video { display: block; width: 100%; aspect-ratio: 9 / 16; border-radius: var(--r-md, 12px); background: var(--vinho, #5a0f27); }
   .videos__nome { margin: 0 0 var(--s-2); font: 600 var(--t-small)/1.4 var(--font-text); }
@@ -316,6 +318,10 @@
       <div class="group">
         <div class="section-head">
           <h2 id="recursos-h">Cada canto em partitura, cifra ou letra. <span class="muted">Igual ao livro impresso.</span></h2>
+        </div>
+        <div class="video-uso">
+          <p class="videos__nome">Veja o app em uso, em 1 minuto</p>
+          <video controls playsinline preload="none" poster="videos/usar-android.jpg" src="videos/usar-android.mp4" aria-label="Vídeo: como usar o Aleluia!"></video>
         </div>
         <div class="grid">
           <article class="card card--row card--open span-6">

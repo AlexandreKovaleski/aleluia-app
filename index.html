@@ -197,6 +197,8 @@
   /* os vídeos do passo a passo (verticais, gravados no Android) */
   .videos { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); margin-top: var(--s-6); }
   .videos figure { margin: 0; min-width: 0; }
+  .videos.videos--largo { grid-template-columns: 1fr; }
+  .videos.videos--largo video { aspect-ratio: 16 / 9; }
   .videos video { display: block; width: 100%; aspect-ratio: 9 / 16; border-radius: var(--r-md, 12px); background: var(--vinho, #5a0f27); }
   .videos__nome { margin: 0 0 var(--s-2); font: 600 var(--t-small)/1.4 var(--font-text); }
   @media (max-width: 1023px) { .guia { margin-top: var(--s-7); } }
@@ -454,7 +456,7 @@
             <h3>Passo a passo no Windows</h3>
             <ol class="passos">
               <li><b>Clique em Baixar para Windows.</b> O arquivo <code>Aleluia-Instalador.exe</code> vai para a pasta <b>Downloads</b>.
-                <span>Se o navegador avisar que o arquivo não é baixado com frequência, escolha <b>Manter</b>. No Edge: <b>⋯</b> → <b>Manter</b> → <b>Mostrar mais</b> → <b>Manter mesmo assim</b>.</span></li>
+                <span>Se o navegador avisar que o arquivo não é baixado com frequência, escolha <b>Manter</b>. No Edge: <b>⋯</b> → <b>Manter</b>; na janela de confirmação, clique na seta ao lado de <b>Excluir</b> e em <b>Manter mesmo assim</b>.</span></li>
               <li><b>Abra o instalador</b>: clique nele na lista de downloads do navegador ou na pasta <b>Downloads</b>.</li>
               <li><b>Libere o programa</b>: se aparecer a tela azul “O Windows protegeu o computador”, clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>.
                 <span>O aviso aparece porque o programa ainda não tem assinatura digital paga.</span></li>
@@ -463,6 +465,9 @@
               <li><b>Pronto: clique em Concluir.</b> O app abre, e depois é só procurar <b>Aleluia</b> no menu Iniciar.
                 <span>Para atualizar, rode o instalador novo: ele troca a versão e mantém as listas.</span></li>
             </ol>
+            <div class="videos videos--largo">
+              <figure><p class="videos__nome">Instalar em vídeo</p><video controls playsinline preload="none" poster="videos/instalar-windows.jpg" src="videos/instalar-windows.mp4" aria-label="Vídeo: como instalar o Aleluia! no Windows"></video></figure>
+            </div>
           </div>
           <div class="guia__bloco" data-os="apple other">
             <h3>Passo a passo no iPhone e no iPad</h3>
